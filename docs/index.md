@@ -295,7 +295,7 @@ class Population:
 
 ```py linenums="157"
 def evolve(rate, scale, add_chance, steps=700000):
-    pop = Population("/content/Bouche.png")
+    pop = Population("/content/test.jpg")
     outdir = f"genetic2/output/"
     os.makedirs(outdir, exist_ok=True)
     save = outdir + "save.json"
@@ -314,6 +314,32 @@ def evolve(rate, scale, add_chance, steps=700000):
         pop.step(i, outdir, rate=rate, scale=scale, add=add_chance)
 ```
 
-??? Output
+## **Exécuter le processus d'évolution de la population d'organismes**
 
-    ![video](assets/videos/video.gif)
+!!! Note "evolve(0.01, 0.1, 0.01)"
+
+    La fonction ``evolve(0.01, 0.1, 0.01)`` exécute le processus d'évolution de la population d'organismes en utilisant les paramètres suivants :
+
+    **Taux de mutation :** 0,01 (1% de chance de mutation)
+
+    **Échelle (scale) :** 0,1 (distribution normale avec un écart-type de 0,1)
+
+    **Chance d'ajout ou de suppression :** 0,01 (1% de chance d'ajout ou de suppression de gènes)
+
+    - [x] Cela signifie que lors de chaque itération de l'évolution, les organismes de la population seront soumis à des mutations avec une probabilité de 0,01 (1% de chance). Les mutations consistent à modifier les valeurs des gènes des organismes. L'échelle de mutation est définie à 0,1, ce qui signifie que les modifications de gènes seront tirées d'une distribution normale avec un écart-type de 0,1.
+
+    - [x] De plus, il y a une probabilité de 0,01 (1% de chance) d'ajouter ou de supprimer des gènes lors de la mutation des organismes.
+
+    - [x] Ces paramètres contrôlent le niveau de diversité génétique et de variation au sein de la population, ainsi que la probabilité de modifications importantes des caractéristiques des organismes au fil des étapes de l'évolution.
+
+```py linenums="175"
+evolve(0.01, 0.1, 0.01)
+```
+
+??? Output "Image de test (Input)"
+
+    ![image](assets/images/test.jpg)
+
+??? Output "Résultat final (Output)"
+
+    ![image](assets/images/output.png)
