@@ -343,3 +343,9 @@ evolve(0.01, 0.1, 0.01)
 ??? Output "Résultat final (Output)"
 
     ![image](assets/images/output.png)
+
+## **Conclusion**
+
+!!! Note "Conclusion"
+
+    Vous pouvez observer une amélioration des images générées à chaque itération. Cependant, en raison des contraintes de ressources, je n'ai pas pu poursuivre l'exécution du code car j'utilisais Google Colab, qui est limité en termes de temps. Pour obtenir le résultat final de mon algorithme, il serait nécessaire de souscrire à Google Colab Pro.
